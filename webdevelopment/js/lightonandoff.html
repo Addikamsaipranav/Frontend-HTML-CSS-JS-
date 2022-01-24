@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color:black;
+            }
+            .first{
+                height: 70%;;
+                border: 1px solid black;
+            }
+            #im1{
+                margin-left: 30%;
+                
+            }
+            #im2{
+                
+                position: relative;
+            }
+            .switch{
+                border: 1px solid black;;
+                width:15%;
+                height: 20%;
+                margin-left: 40%;
+                margin-top: 5%;
+                background-color: #1e1e1e;;
+            }
+          #bt1{
+              background-color: green;
+          }
+          #bt2{
+              background-color: red;
+          }
+          p{
+              color: white;
+          }
+            
+        </style>
+        <script>
+               function fn1(){
+                   document.getElementById("im1").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+                   document.getElementById("im2").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png";
+                   
+               }
+               function fn2(){
+                   document.getElementById("im1").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+                   document.getElementById("im2").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png";
+                  
+
+               }
+        </script>
+    </head>
+    <body>
+        <div class="first">
+         <img id="im1" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" width="200">
+         <img id="im2" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png" width="200">
+         <div class="Switch">
+            <center><p>Switch on</p>
+                <button id="bt1" onclick="fn1()">ON</button>
+            <button id="bt2" onclick="fn2()">OFF</button>
+            </center>
+
+        </div>
+         </div>
+
+    </body>
+</html>

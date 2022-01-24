@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+          var rd1 = document.getElementById("rd1");
+          var rd2 = document.getElementById("rd2");
+          if(rd1.checked==true){
+              alert(rd1.vaue);
+          }
+          else if(rd2.checked==true) {
+              alert(rd2.value);
+              
+          } 
+          else{
+              alert("user didnt selected any thing");
+          }
+        </script>
+    </head>
+    <body>
+        <input id="rd1" name="grp1" type="radio"
+        value="Simple snippets">Simplesnippets</input><br>
+        <button onclick="fn1()">Click me</button>
+    </body>
+</html>

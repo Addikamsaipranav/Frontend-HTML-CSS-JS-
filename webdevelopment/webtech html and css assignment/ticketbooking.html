@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>
+tic booking
+</title>
+<style>
+th,td
+{
+font-size:25px;
+}
+</style>
+<script>
+function fun1(){
+var x=document.getElementById("from1").value;
+var y=document.getElementById("to1").value;
+var z=document.getElementById("passenger").value;
+if(z=="")
+{
+alert("enter number of passengers");
+return false;
+}
+if(z>0&&z<=5)
+{
+document.getElementById("a").innerHTML="your ticket from "+x+" to "+y+" confirmed. ";
+}
+else
+{
+alert("tickets not available" );
+}
+}
+</script>
+</head>
+<body>
+<form>
+<table align="center" cellpadding ="10" cellspacing ="10">
+<tr>
+<td>From</td>
+<td><input type="text" id="from1" required /></td> 
+</tr>
+<tr>
+<td>To</td>
+<td><input type="text" id="to1" required /></td>
+</tr>
+ <tr>
+<td>Tranin Name</td>
+<td>
+<Select name="dropdown" required>
+<option value="sabari" > sabari </option>
+<option value="venkatadri"> venkatadri </option>
+<option value="narayanadri" > narayanadri </option></select></td>
+</tr>
+<tr>
+<td>Couch Number</td>
+<td>
+<Select required>
+<option value="s1" > s1 </option>
+<option value="s2"> s2 </option>
+<option value="s3" > s3 </option></select></td>
+</tr>
+<tr>
+<td>Date</td>
+<td><input type="Date" name="Date" required /></td>
+</tr>
+<tr>
+<td>Timming</td>
+<td><input type="text" name="Timming" required /></td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td>
+<Select name="dropdown" required >
+<option value="male" > male </option>
+<option value="female"> female </option>
+</select></td>
+</tr>
+<tr>
+<td>No of passenger</td>
+<td><input type="text" id="passenger" required /></td> 
+</tr>
+<tr>
+<td>
+<input type="submit" name="submit" value="submit"/>
+</td>
+<td>
+<input type="reset" name="reset" value="reset"/>
+</td>
+</tr>
+<tr>
+</td>
+</tr>
+</table>
+</form>
+<button onclick="fun1()" style="margin-left:650px" >Confirm</button><br/><br/>
+<p id="a"> </p>
+</body>
+</html>
+

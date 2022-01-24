@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            function fn1(){
+                var para = document.getElementsByTagName("p");
+                for(var i=0;i<para.length;i++) {
+                    if(i%2==0 )
+                      para[i].style.color="blue"
+                para[i].style.fontSize =26;}
+            }
+        </script>
+    </head>
+    <body>
+        <p>this is pranav</p>
+        <p>this is pranav</p>
+        <p>this is pranav</p>
+        <p>this is pranav</p>
+        <p>this is pranav</p>
+        <button onclick="fn1()">Click me</button>
+    </body>
+</html>

@@ -1,0 +1,187 @@
+<html>
+ <head>
+   <title>19MIS0105</title>
+<script>
+function validateform(){
+var x= document.forms["myform"]["name"].value;
+nvali(x);
+var y=document.forms["myform"]["address"].value;
+advali(y);
+var z=document.forms["myform"]["mail"].value;
+evali(z);
+var a=document.forms["myform"]["country"].selectedIndex;
+avali(a);
+var b=document.forms["myform"]["grivnat"].selectedIndex;
+bvali(b);
+gvali(b);
+}
+function nvali(x){
+if(x==""){
+alert("name is mandatory");
+return false;
+}
+document.getElementById("outtab").rows[1].cells[1].innerHTML=x;
+return true;
+}
+function advali(y){
+if(y==""){
+alert("address is mandatory");
+return false;
+}
+document.getElementById("outtab").rows[2].cells[1].innerHTML=y;
+return true;
+}
+function evali(z){
+if(z==""){
+alert("email is mandatory");
+return false;
+}
+document.getElementById("outtab").rows[4].cells[1].innerHTML=z;
+return true;
+}
+function avali(a){
+if(a>0){
+document.getElementById("outtab").rows[3].cells[1].innerHTML=myform.co
+untry.options[a].text;
+return true;
+}
+else{
+alert("Select country");
+return false;
+}
+}
+function bvali(b){
+if(b>0){
+document.getElementById("outtab").rows[5].cells[1].innerHTML=myform.gri
+vnat.options[b].text;
+return true;
+}
+else{
+alert("Select grievance nature");
+return false;
+}
+}
+function gvali(b){
+if(myform.griv.options[b].text=="nogrivances"){
+document.getElementById("ppp").innerHTML="no grivances";
+return true;
+}
+}
+function myfunc(){
+validateform();
+}
+</script>
+</head>
+<body>
+<form name="myform" onsubmit="return validateform()" method="post">
+<table border="2">
+<tr>
+<td>
+Name of customer :
+</td>
+<td>
+<input type="Text" name="name" />
+</td>
+</tr>
+<tr>
+<td>
+Address :
+</td>
+<td>
+    <Textarea name="address"></Textarea>
+</td>
+</tr>
+<tr>
+<td>
+Telecom Circle :
+</td>
+<td>
+<select size="1" name="country">
+<option value="a">andamannicobar</option>
+<option value="an">andrapradesh</option>
+<option value="as">assam</option>
+<option value="bi">bihar</option>
+<option value="ch">chhattisgarh</option>
+<option value="che">chennai</option>
+<option value="gu">gujarat</option>
+<option value="hi">himachalpradesh</option>
+<option value="ca">calcutta</option>
+<option value="ha">haryana</option>
+<option value="ja">jarkhand</option>
+<option value="jk">jammu and kashmir</option>
+<option value="kl">kerala</option>
+<option value="ka">karnataka</option>
+<option value="mh">maharastra</option>
+<option value="mp">madhyapradesh</option>
+<option value="n1">north east1</option>
+<option value="n2">north east2</option>
+<option value="o">odisha</option>
+<option value="p">punjab</option>
+<option value="r">rajastan</option>
+<option value="TN" selected>TAMILNADU</option>
+<option value="u1">up east</option>
+<option value="u2">up west</option>
+<option value="ut">utranchal</option>
+<option value="wb">west bengal</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+E-mail :
+</td>
+<td>
+<input type="email" name="mail"/>
+</td>
+</tr>
+<tr>
+<td>
+Grievance Nature :
+</td>
+<td>
+<select name="grivnat"><option value="hugebill">huge bills for limited
+mobile
+usage</option><option value="roamchr">roaming
+charges</option><option
+value="fsd">frequent service disruption</option></select>
+</td>
+</tr>
+<tr >
+<td align="center" colspan="2">
+<input type="submit" name="submit" value="submit">
+</td>
+</tr>
+</table>
+</form>
+<br>
+<br>
+<p id="ppp"></p>
+<br>
+<table id="outtab" border="1">
+<tr>
+<td colspan="2">form output</td>
+</tr>
+<tr>
+<td>Name</td>
+<td></td>
+</tr>
+<tr>
+<td>Address</td>
+<td></td>
+</tr>
+<tr>
+<td>Telecom circle</td>
+<td></td>
+</tr>
+<tr>
+<td>Email id</td>
+<td></td>
+</tr>
+<tr>
+<td>Greivance</td>
+<td></td>
+</tr>
+</table>
+<button onclick="myfunc()">Display</button>
+</body>
+</html>

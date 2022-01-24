@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+            function validate(){
+            var username=document.getElementById("uname");
+            var password=document.getElementById("pass");
+            if(username.value.trim()=="" || password.value.trim()=="")
+             {
+                 alert("no blanks will be there");
+                 return false;
+             }
+             else{
+                 return true;
+             }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="https://vtop.vit.ac.in/vtop/initialProcess" onsubmit=" return validate()">
+            <input type="text" id="uname" placeholder="USER NAME" required><br>
+            <input type="password" id="pass" placeholder="PASSWORD" required><br>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <script>
+            function msg() {
+                alert("hello function");
+            }
+            function cube(num1) {
+                alert(num1*num1*num1);
+            }
+            function getinfo() {
+                return "hello how are you" ;
+            }
+            document.writeln(getinfo());
+            function get() 
+            {
+            var res=confirm("enter ok to continue");
+            if(res==true){
+                document.writeln("user wants to continue");
+            }    
+            else{
+                document.writeln("user doesnot wants to continue");
+            }
+            }
+        </script>
+        <input type="button" onclick="msg()" value="on click">
+        <input type="button" onclick="cube(3)" value="click here to find cube fo 3">
+        <input type="button" value="button" onclick="get()">
+        
+    </body>
+</html>

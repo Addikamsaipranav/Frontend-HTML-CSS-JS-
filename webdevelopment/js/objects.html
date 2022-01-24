@@ -1,0 +1,45 @@
+<html>
+    <body>
+        <script>
+        /*java script is object based lanagauge 
+         object syatx :
+            object={
+                 property1:value1,
+                 property2:value2,
+                 ........:........
+                 .
+                 .
+                 .
+            }
+            ela emp anede obj name and inside vunnade values 
+
+            */
+           var Car={
+               car_model :"tesla",
+               car_price :34000,
+               car_name :"model2",
+               teslapilot : function(){
+                   document.write("hiiiiiii");
+               }
+           }
+           Car.fueltype="petrol";
+           delete Car.car_price;
+        document.write(Car.car_model);
+        document.write(Car.fueltype); 
+        function car(car_model,car_name,car_price){
+            this.car_model=car_model;
+            this.car_name=car_name;
+            this.car_price=car_price;
+            this.teslapilot=function(){
+                document.write("this is auto pilot");
+            }
+        }      
+        var c1=new car("m1","tesla","3500");
+            c1.teslapilot();
+            "<br>"
+            document.write(c1.car_model);  
+           
+       </script>
+
+    </body>
+</html>

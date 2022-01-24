@@ -1,0 +1,95 @@
+#title{
+    background-color:#1e1e1e;
+
+}
+b{
+    font-size:20px;
+}
+h1{
+    font-family:Montserrat-Black;
+    size:3.5rem;
+     
+    line-height: 1.5;
+    color: white;
+}
+#brand{
+     color:white;    
+}
+body{
+    width:100;
+}
+#text{
+    color: white;
+    font-family:sans-serif;
+    font-weight: bold;
+}
+.container-fluid{
+    padding: 2% 5%;
+}
+.navabar{
+    padding-bottom: 4.5rem;
+
+}
+.nav-item{
+    padding:  0 10px;
+}
+.nav-link{
+    font-size: 1.2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.buttons{
+    margin: 5% 3% 5% 0%;
+}
+.title-image{
+    width: 50%;
+    margin-top: 7%;
+    margin-left: 10;
+    transform: rotate(25deg);
+}
+#features{
+
+    padding: 7% 10%;
+}
+h3{
+    font-weight:bolder;
+
+}
+.feature-box{
+    text-align: center;
+    padding:5%;
+}
+p{
+    color: #8f8f8f;
+}
+.icon{
+    color: #ef8172; 
+    margin-bottom: 1rem;
+}
+.icon:hover{
+    color: #ff4c68;;
+}
+#testimonials{
+    padding: 7% 10%;
+    text-align: center;
+    background-color: #ef8172;
+    color: #fff;
+}
+h2{
+    font-weight: bolder;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+.Testimonials{
+         width: 10%;
+         border-radius: 100%;
+         margin: 20px;
+}
+#press{
+    background-color: #ef8171;
+    text-align: center;
+    padding-bottom: 3%;
+}
+.presss{
+    width: 15%;
+    margin: 20px 20px 50px;
+}

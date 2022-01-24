@@ -1,0 +1,175 @@
+<html>
+    <head>
+       <title>19MIS0105</title>
+        <script>
+        function displaytime() {
+        x=getHour();
+        y=getMin();
+        z=getSec();
+        document.getElementById("id1").value=x+" H";
+        document.getElementById("id2").value=y+" M";
+        document.getElementById("id3").value=z+" S";
+        setTimeout(displaytime,1000);
+        }
+        function getHour() {
+        var obj=new Date();
+        h=obj.getHours();
+        return h;
+        }
+        function getMin() {
+        var obj=new Date();
+        h=obj.getMinutes();
+        return h;
+        }
+        function getSec() {
+        var obj=new Date();
+        h=obj.getSeconds();
+        return h;
+        }
+        var slideIndex=0;
+        imageSlider();
+        function imageSlider() {
+        var i;
+        var slide=document.getElementsByClassName("fade");
+        for(i=0;i<slide.length;i++)
+        {
+        slide[i].style.display="none";
+        }
+        slideIndex++;
+        if(slideIndex>slide.length)
+        {
+        slideIndex=1;
+        }
+        slide[slideIndex-1].style.display = "block";
+        setTimeout(imageSlider, 2000);
+        }
+        function colorChange() {
+        var x=document.getElementById("mySelect").value;
+        document.getElementById("color").style.backgroundColor = x;
+        var y=document.getElementById("myfont").value;
+        document.getElementById("color").style.fontFamily=y;
+        var z=document.getElementById("mySize").value;
+        document.getElementById("color").style.fontSize=z;
+        }
+        </script>
+        <style>
+        * {box-sizing:border-box}
+        body {font-family: Verdana,sans-serif;}
+        .fade {display:none;
+        border: 5px solid black;
+        height: 360px;
+        width: 610px;
+        }
+        .image {
+        max-width: 1000px;
+        position: absolute;
+        top: 208px;
+        background-image: url("full.jpg");
+        padding: 20px;
+        height: 400px;
+        width: 650px;
+        }
+        #digitalclock
+        {
+        background-color: rgba(0,0,0,0.5);
+        float: right;
+        position: absolute;
+        top:70px;
+        left: 1000px;
+        padding: 10px;
+        border-radius: 10px;
+        }
+        #digital{
+        background-image: url(vit.jpg);
+        background-size: contain;
+        position: relative;
+        width: 100%;
+        padding: 100px;
+        }
+        #digitalclock input[type=text]{
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        text-align: center;
+        color: crimson;
+        background-color: rgba(224, 210, 222, 1);
+        font-style: italic;
+        font-size: larger;
+        }
+        #color
+        {
+        position: absolute;
+        top: 228px;
+        left: 658px;
+        height: 360px;
+        width: 700px;
+        padding: 100px;
+        }
+        #new{
+        position: fixed;
+        background-color: #bbbbbb;
+        top: 450px;
+        left: 850px;
+        padding: 20px;
+        }
+        #newtext{
+        background-color: rgb(227, 179, 248);
+        margin-top: -70px;
+        }
+        </style>
+        </head>
+        <body onload=imageSlider();displaytime();>
+        <div id="digital">
+        <div id="digitalclock">
+        <input id="id1"type="text"><input id="id2" type="text"><input id="id3" type="text">
+        </div>
+        </div>
+        <div class="image" >
+        <div class="fade">
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" style="height: 350px;
+        width: 600px;">
+        </div>
+        <div class="fade">
+        <img name="imgm" src="https://cdn.pixabay.com/photo/2014/02/27/16/10/tree-276014__340.jpg" style="height: 350px;
+        width: 600px;">
+        </div>
+        <div class="fade">
+        <img name="imgm" src="https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg" style="height: 350px;
+        width: 600px;">
+        </div>
+        </div>
+        <div id="color" style="background-color: rgb(21, 30, 34); ">
+        <div id="newtext">
+        <p style="border: 3px solid black;" id="text"> write something to test the input 
+            
+        </p>
+        </div>
+        <form>
+        <div id="new">
+        Select Color:
+        <input type="color" id="mySelect">
+        <br>
+        Select Font:
+        <select id="myfont">
+        <option value="Arial" style="font-family: Arial">Arial</option>
+        <option value="'Baskerville Old Face'" style="font-family: 'Baskerville Old Face'">Baskerville Old Face</option>
+        <option value="'Berlin Sans FB Demi'" style="font-family: 'Berlin Sans FB Demi'">Berlin Sans FB Demi</option>
+        <option value="Century" style="font-family: Century">Century</option>
+        <option value="'Javanese Text'" style="font-family: 'Javanese Text'">Javanese Text</option>
+        </select>
+        <br>
+        Size:
+        <select id="mySize">
+        <option value="large" >Large</option>
+        <option value="larger" >Larger</option>
+        <option value="medium" >Medium</option>
+        <option value="small">Small</option>
+        <option value="smaller">Smaller</option>
+        </select>
+        <br>
+        <input type="button" value="click" name="click" onclick="colorChange()">
+        </div>
+        </form>
+        </div>
+        </body>
+</html>
